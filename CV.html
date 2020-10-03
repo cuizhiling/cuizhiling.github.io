@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html>
+<title>Zhiling Cui's CV</title>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css" />
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div class="sidebar">
+      <div>
+        <img src="images/me.jpg" width="150" height="190" />
+        <div>
+          <h2>崔志凌</h2>
+        </div>
+        <p>
+          南昌大学&nbsp;
+        </p>
+        <p>
+          信息工程学院&nbsp;
+        </p>
+        <p>
+          2017级物联网工程
+        </p>
+        <p>
+          中国仿真学会智能仿真优化与调度专委会会员
+        </p>
+        <p>
+          江西省智能信息系统重点实验室
+        </p>
+        <p>
+          班长&nbsp;辅导员助理
+        </p>
+        <p v-for="content in contents">
+          <a :href="'#'+content" style="color: white;">{{content}}</a>
+        </p>
+      </div>
+    </div>
+    <div class="content">
+      <!-- Research Projects -->
+      <div>
+   <h2 id="CV">
+          CV
+        </h2>
+        <el-divider></el-divider>
+        <p>
+          教育
+      </p>
+        <ul v-for="project in projects0">
+          <li>
+            <p>{{project}}</p>
+          </li>
+        </ul>
+        <el-divider></el-divider>
+        <p>
+
+        <p>
+          科研
+        </p>
+        <ul v-for="project in projects">
+          <li>
+            <a :href="project.href">{{project.title}}</a>
+          </li>
+        </ul>
+        <el-divider></el-divider>
+        <p>
+          竞赛
+        </p>
+        <ul v-for="project in projects1">
+          <li>
+            <p>{{project}}</p>
+          </li>
+        </ul>
+        <el-divider></el-divider>
+        <p>
+          荣誉
+        </p>
+        <ul v-for="project in projects2">
+          <li>
+            <p>{{project}}</p>
+          </li>
+        </ul>
+        <el-divider></el-divider>
+        <p>
+          其他
+        </p>
+        <ul v-for="project in projects3">
+          <li>
+            <p>{{project}}</p>
+          </li>
+        </ul>
+        <el-divider></el-divider>
+        <p>
+          技能
+        </p>
+        <ul v-for="project in projects4">
+          <li>
+            <p>{{project}}</p>
+          </li>
+        </ul>
+        <el-divider></el-divider>
+      </div>
+
+
+      <!-- About Me -->
+      <div>
+        <h2 id="About Me">About Me</h2>
+        <el-divider></el-divider>
+        <p>
+          一个有头发的程序猿。
+        </p>
+        <p>
+          爱生活，爱折腾，爱科研。
+        </p>
+        <p>
+          E-mail：6112117011@email.ncu.edu.cn
+        </p>
+        </p>
+          知乎主页：https://www.zhihu.com/people/chang-liu-feng-qing-yang-98
+        </p>
+        </p>
+          Github主页：https://github.com/cuizhiling
+        </p>
+        <el-divider></el-divider>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  new Vue({
+    el: '#app',
+    data: function () {
+      return {
+        interests: [
+          '',
+        ],
+        contents: ['CV', 'About Me'],
+        projects0: [
+          '2021.09-2024.06 硕士（预计） ：武汉大学遥感信息工程学院 模式识别与智能系统专业（学术型） 计算机视觉与遥感实验室(CVRS Lab)  研究方向：计算机视觉、深度学习、模式识别、高分辨率遥感目标提取和场景解释',
+          '2017.09-2021.06 学士（预计） ：南昌大学信息工程学院     物联网工程专业                   江西省智能信息系统重点实验室      研究方向：计算智能、演化计算、机器人控制',
+          '2014.04-2017.06 高中 ：宁都中学2014级17班（翠微3班）',
+        ],
+        projects: [
+          {
+            title: '作为本科生，入选并参加2020国际“人工智能”研究生暑期论坛',
+          },
+          {
+            title: 'Z. Cui, C. Li, W. Dai, L. Zhang and Y. Wu, "A Hierarchical Teaching-Learning-Based Optimization Algorithm for Optimal Design of Hybrid Active Power Filter," in IEEE Access, vol. 8, pp. 143530-143544, 2020 (SCI, JCR 1, IF=3.745)',
+            href: 'https://ieeexplore.ieee.org/document/9097257',
+          },
+          {
+            title: 'Z. Cui, C. Li, J. Huang, Y. Wu and L. Zhang, "An Improved Moth Flame Optimization Algorithm for Minimizing Specific Fuel Consumption of Variable Cycle Engine," in IEEE Access, vol. 8, pp. 142725-142735, 2020 (SCI, JCR 1, IF=3.745)',
+            href: 'https://ieeexplore.ieee.org/document/9113291',
+          },
+          {
+            title: '欢迎交流讨论合作！所有论文均可提供代码及原始数据！',
+          },
+          {
+            title: 'ORCID（Open Researcher and Contributor ID）: 0000-0002-2758-2835',
+            href: 'https://orcid.org/0000-0002-2758-2835',
+          },
+  
+        ],
+        projects1: [
+
+          '2019.06：南昌大学华为杯物联网创新设计大赛二等奖', 
+          '2019.06：南昌大学华为杯物联网创新设计大赛优胜奖',  
+          '2019.05：南昌大学挑战杯课外学术科技作品大赛三等奖',  
+          '2019.04：美国大学生数学建模竞赛三等奖',
+          '2018.12：第七届大学生汽车创新设计赛一等奖',
+          '2018.09：南昌大学互联网+创新创业大赛三等奖',
+          '2018.09：南昌大学信息工程学院互联网+创新创业大赛一等奖',
+          '2018.08：中国机器人大赛一等奖（全国亚军）',
+          '2018.08：中国机器人大赛三等奖',
+          '2018.04：中国工程机器人大赛三等奖-1',
+          '2018.04：中国工程机器人大赛三等奖-2', 
+        ],
+        projects2: [
+          '2020.11：南昌大学三好学生标兵（预计）',
+          '2020.11：南昌大学特等奖学金（预计）',
+          '2020.10：南昌大学五星级寝室成员',
+          '2020.07：南昌大学优秀党员',
+          '2020.05：南昌大学优秀团干',
+          '2019.11：南昌大学三好学生标兵',
+          '2019.11：南昌大学一等奖学金',
+          '2019.10：南昌大学五星级寝室成员',
+          '2018.05：南昌大学优秀团员',
+        ],
+        projects3: [
+          '2020.05- ：中国仿真学会智能仿真优化与调度专委会会员',
+          '2019.09- ：南昌大学17级物联网工程辅导员助理',
+          '2019.06：南昌大学党校2019第6期“党员发展对象培训班”结业',
+          '2018.08-2019.08：南昌大学学长小教员',
+          '2018.05：南昌大学信息工程学院分党校第26期“入党积极分子培训班”结业', 
+          '2018.05：南昌大学信息工程学院第11期“大学生骨干培训班”结业',
+          '2017.12：南昌大学信息工程学院学生代表大会、团员代表大会代表',
+          '2017.12：南昌大学校运会志愿者',
+          '2017.09：南昌大学物联网工程171班班长、副团支书',
+        ],
+        projects4: [
+          'C/C++/Matlab/Python',
+          'AE/PR/PS',
+          'Visio/Word/Excel/PPT',
+          'Origin/Endnote/Latex',
+          'CET-4/CET-6', 
+        ],
+      }
+    },
+  })
+</script>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    line-height: 30px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  i {
+    font-size: 14px;
+    clear: left;
+  }
+
+  .figure_img {
+    max-width: 70%;
+  }
+
+  .sidebar {
+    position: fixed;
+    width: 280px;
+    padding: 10px;
+    height: 100%;
+    background-color: #272727;
+    color: white;
+    top: 0px;
+    bottom: 0;
+    text-align: center;
+  }
+
+  .content {
+    position: fixed;
+    min-width: 300px;
+    padding: 10px 40px 10px 40px;
+    left: 300px;
+    right: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    top: 0px;
+    bottom: 0;
+  }
+</style>
+
+</html>
